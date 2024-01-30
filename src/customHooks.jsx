@@ -5,21 +5,6 @@ export function useData(url){
     const [data,setData] = useState([])
     const [filters,setFilters] = useState({})
 
-    // useEffect(()=>{
-    //     if(url==='https://api.spacexdata.com/v3/rockets'){
-    //     setFilters({
-    //         rocket_name:'',
-    //         active:null,
-    //         country:null, 
-    //     })
-    // }else{
-    //     setFilters({
-    //         status:null,
-    //         type:null
-    //     })
-    // }
-
-    // },[])
 
     useEffect(()=>{
         fetch(url)
@@ -49,5 +34,5 @@ export function useData(url){
         filteredResults=data
     }
 
-    return {data,filteredResults,filters,setFilters}
+    return {filteredResults,filters,setFilters}
 }

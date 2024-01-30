@@ -7,7 +7,7 @@ import Banner from './Banner'
 
 export default function Rocket() {
   
-  const { data,filteredResults,filters,setFilters } = useData('https://api.spacexdata.com/v3/rockets')
+  const { filteredResults,filters,setFilters } = useData('https://api.spacexdata.com/v3/rockets')
   
     function handleChange(e){
         const { name,value } = e.target
