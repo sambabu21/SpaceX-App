@@ -10,7 +10,7 @@ export default function Pagination({ totalPosts,postsPerPage,paginate,currentPag
              <ul>
                  {pageNumbers.map((num)=>{
                     return  <li key={num}>
-                        <a className={currentPage===num?"page-num active":"page-num"} onClick={()=>paginate(num)}>{num}</a>
+                        <a className={currentPage===num?"page-num link-active":"page-num"} onClick={()=>paginate(num)}>{num}</a>
                     </li>
                  })}
              </ul>
