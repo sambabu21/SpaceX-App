@@ -240,3 +240,26 @@
 .content-table >tbody> tr:last-of-type{
   border-bottom:3px solid #c7b5b5;
 }
+
+.page-number-container{
+  margin: auto;
+  margin-bottom: 20px;
+}
+.page-number-container ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+ 
+}
+.page-num{
+  font-size: 1.5rem;
+  padding: 0px 10px;
+  text-decoration: none;
+  color: whitesmoke;
+ height: 100%;
+ border: 1px solid whitesmoke;
+}
+.active{
+  background-color: whitesmoke;
+  color: #111111;
+}

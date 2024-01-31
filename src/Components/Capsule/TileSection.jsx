@@ -1,8 +1,23 @@
+import { useState } from "react"
 import Tile from "./Tile"
+import Pagination from "../Pagination"
 
 export default function TileSection({ filteredResults }){
+    //state to control pagination
+    
+    const [currentPage,setCurrentPage]=useState(1)
+    const [postsPerPage,setPostsPerPage] = useState(10)
 
-    const listElements = filteredResults.map((capsule)=>{
+    //determining current page
+    const indexOfLastPost = currentPage*postsPerPage
+    const indexOfFirstPost = indexOfLastPost - postsPerPage
+    const currentPosts = filteredResults.slice(indexOfFirstPost,indexOfLastPost)
+
+    function paginate(number){
+        setCurrentPage(number)
+    }
+
+    const listElements = currentPosts.map((capsule)=>{
         return <Tile name={capsule.capsule_serial} type={capsule.type} status={capsule.status} key={capsule.capsule_serial}/>
     })
     return (
@@ -22,6 +37,7 @@ export default function TileSection({ filteredResults }){
                         </tbody>
                     </table>
                 </div>
+                <Pagination totalPosts={filteredResults.length} postsPerPage={postsPerPage} paginate={paginate} currentPage={currentPage}/>
             </div>
     )
 }
