@@ -166,6 +166,13 @@
  gap: 50px;
 }
 
+.detail-window-capsule{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
 .detail-container{
   max-width: 1000px;
   max-height: 380px;
@@ -249,8 +256,10 @@
   display: flex;
   list-style-type: none;
   justify-content: space-between;
- 
+  /* gap: 10px; */
 }
+
+
 .page-num{
   font-size: 1.5rem;
   padding: 0px 10px;
@@ -259,7 +268,9 @@
  height: 100%;
  border: 1px solid whitesmoke;
 }
-.active{
+
+
+.link-active{
   background-color: whitesmoke;
   color: #111111;
 }

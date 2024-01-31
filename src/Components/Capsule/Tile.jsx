@@ -1,6 +1,6 @@
-export default function Tile({ name,type,status }){
+export default function Tile({ name,type,status,handleClick }){
     return (
-        <tr>
+        <tr onClick={handleClick}>
             <td>{name}</td>
             <td>{type}</td>
             <td>{status}</td>
